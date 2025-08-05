@@ -28,6 +28,17 @@
     @apply bg-[url("/images/noise.png")] absolute inset-0 size-full
 }
 
+.customContainer {
+    @apply w-full xl:max-w-[1120px] md:max-w-[900px] lg:max-w-[1000px] mx-auto
+}
+
+.text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #898989);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
 @layer base {
     h1 {
         font-family: var(--font-modernNegra);

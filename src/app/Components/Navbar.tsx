@@ -26,7 +26,7 @@ const Navbar = () => {
 
     return (
         <div className="w-full h-full p-5">
-            <nav className="w-full xl:max-w-[1120px] md:max-w-[750px] lg:max-w-[1000px] mx-auto flex-center flex-col md:flex-row gap-6 sm:gap-8 md:gap-0
+            <nav className="customContainer flex-center flex-col md:flex-row gap-6 sm:gap-8 md:gap-0
                 md:justify-between">
                 <Link href='#home' className="flex-center gap-2 font-semibold cursor-pointer">
                     <span><Image src='/images/logo.png' alt="logo" width={32} height={32} /></span>
