@@ -96,41 +96,6 @@ const Hero = () => {
 
     }, [])
     return (
-<<<<<<< HEAD
-        <section className="w-full h-[600px] relative bg-black/50" id="hero">
-            <div className="bg-noisy z-10">
-                <h1 className='text-7xl md:text-9xl xl:text-[180px] font-semibold mt-20 md:mt-16 text-center [letter-spacing:2px] opacity-0 uppercase mainTitle'>Cocktails</h1>
-                <Image src='/images/hero-left-leaf.png' alt="leftLeafImg" width={266} height={461}
-                    className="leftLeaf absolute w-1/3 md:w-fit bottom-12 md:-bottom-20 md:top-40 lg:top-30"
-                />
-                <Image src='/images/hero-right-leaf.png' alt="rightLeafImg" width={266} height={461}
-                    className="rightLeaf absolute w-1/4 md:w-fit right-0 top-1/3 md:top-auto md:bottom-0 lg:top-0"
-                />
-                <div className="absolute flex justify-between items-end w-full p-5 md:top-[60vh]">
-                    <div className="customContainer space-y-5 flex items-center justify-between">
-                        <div className="hidden md:flex text-left flex-col gap-4">
-                            <p>Cool. Crisp. Classic.</p>
-                            <h1 className="text-5xl text-[#e7d393] opacity-0 paragraph">Sip the Spirit <br /> of Summer</h1>
-                        </div>
-                        <div className="md:w-1/3 text-center md:text-left flex flex-col gap-4">
-                            <p className="opacity-0 paragraph">Every cocktail on our menu is a blend of premium ingredients, creative flair, and timeless recipes — designed
-                                to delight your senses.
-                            </p>
-                            <Link href='#cocktails' className="text-white/70 font-semibold cursor-pointer opacity-0 paragraph">View Cocktails</Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/*
-            */}
-            <div className="video absolute bottom-0 left-0 h-[55%] md:h-full pt-56 sm:pt-20 md:pt-20 lg:pt-0 xl:pt-5 inset-0 w-full md:object-contain object-bottom
-                mx-auto min-[450px]:pt-40 min-[550px]:pt-36 min-[700px]:pt-10 md:min-[850px]:pt-10 md:min-[950px]:pt-0">
-
-                <video ref={videoRef} src="/videos/output.mp4" muted playsInline preload="metadata" className="w-full xl:w-[80%] mx-auto"
-                />
-            </div>
-        </section >
-=======
         <>
             <section className="w-full min-h-dvh relative z-10" id="hero">
                 <div className="bg-noisy">
@@ -167,12 +132,7 @@ const Hero = () => {
                 />
             </div>
         </>
->>>>>>> master
     )
 }
 
 export default Hero
-<<<<<<< HEAD
-=======
-
->>>>>>> master

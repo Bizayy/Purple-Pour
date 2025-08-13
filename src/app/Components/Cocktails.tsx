@@ -8,17 +8,6 @@ import { cocktailLists, mockTailLists } from "../Constants"
 const Cocktails = () => {
 
     useGSAP(() => {
-
-<<<<<<< HEAD
-    }, [])
-
-    return (
-        <section id='cocktails' className='bg-black/50 relative'>
-            <div className="bg-[url(/images/noise.png)] p-5">
-                <Image src='/images/cocktail-left-leaf.png' width={294} height={332} alt="cocktailLeftLeafImg" id="c-left-leaf" className="w-1/3 md:w-fit absolute left-0" />
-                <Image src='/images/cocktail-right-leaf.png' width={294} height={332} alt="cocktailRightLeafImg" id="c-right-leaf" className="w-1/3 md:w-fit absolute right-0" />
-                <div className="flex flex-col gap-12 customContainer">
-=======
         const parallaxTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '#cocktails',
@@ -40,6 +29,8 @@ const Cocktails = () => {
 
     }, [])
 
+
+
     return (
         <section id='cocktails' className='relative min-h-dvh w-full overflow-hidden bg-[url(/images/noise.png)] py-5 pb-24 sm:pb-10 sm:py-20'>
             <div className="p-5">
@@ -48,7 +39,6 @@ const Cocktails = () => {
                 <Image src='/images/cocktail-right-leaf.png' width={294} height={332} alt="cocktailRightLeafImg" id="c-right-leaf"
                     className="w-1/3 md:w-fit absolute right-0 bottom-2 " />
                 <div className="flex flex-col md:flex-row gap-12 md:justify-between md:gap-0 customContainer">
->>>>>>> master
                     <div className="">
                         <h2 className="mb-7 text-lg font-semibold">Most popular cocktails:</h2>
                         <ul className="flex flex-col gap-7">
@@ -88,7 +78,3 @@ const Cocktails = () => {
 }
 
 export default Cocktails
-<<<<<<< HEAD
-=======
-
->>>>>>> master

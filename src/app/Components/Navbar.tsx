@@ -34,11 +34,7 @@ const Navbar = () => {
     }, [])
 
     return (
-<<<<<<< HEAD
         <div className="w-full p-5 navDiv bg-[url(/images/noise.png)] z-20">
-=======
-        <div className="w-full p-5 navDiv bg-[url(/images/noise.png)] z-50">
->>>>>>> master
             <nav className="customContainer flex-center flex-col md:flex-row gap-6 sm:gap-8 md:gap-0
                 md:justify-between">
                 <Link href='#home' className="flex-center gap-2 font-semibold cursor-pointer">
@@ -58,7 +54,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-<<<<<<< HEAD
-=======
-
->>>>>>> master
