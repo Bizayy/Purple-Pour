@@ -42,6 +42,20 @@
     -webkit-background-clip: text;
 }
 
+.radial-gradient {
+    background: radial-gradient(circle at center,
+            #434343 0%,
+            #000 50%,
+            transparent 100%);
+}
+
+.masked-img {
+    mask-image: url("/images/mask-img.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+}
+
 @layer base {
     h1 {
         font-family: var(--font-modernNegra);

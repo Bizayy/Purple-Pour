@@ -22,7 +22,7 @@ const About = () => {
         const imgsScrollTrigger = gsap.timeline({
             scrollTrigger: {
                 trigger: '.top-grid',
-                start: 'top 80%',
+                start: 'top 70%',
             }
         })
 
