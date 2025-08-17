@@ -5,7 +5,7 @@
     --foreground: #171717;
 }
 
-<<<<<<< HEAD @theme {
+@theme {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --font-sans: var(--font-geist-sans);
@@ -13,7 +13,6 @@
     --font-modernNegraFont: var(--font-modernNegra);
 }
 
-@theme {}
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -21,7 +20,6 @@
         --foreground: #ededed;
     }
 }
-
 
 .flex-center {
     @apply flex items-center
