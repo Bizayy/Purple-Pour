@@ -14,10 +14,10 @@ const Hero = () => {
     //     window.innerWidth < 768 ? isMobileDevice = true : isMobileDevice = false;
     // }, [])
 
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobileDevice, setIsMobileDevice] = useState(false);
 
     useEffect(() => {
-        setIsMobile(window.innerWidth < 768);
+        setIsMobileDevice(window.innerWidth < 768);
     }, [])
 
     useGSAP(() => {
