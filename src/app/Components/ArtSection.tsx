@@ -2,9 +2,9 @@ import Image from "next/image"
 import { featureLists, goodLists } from "../Constants"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import { useEffect } from "react"
+import { RefObject, useEffect } from "react"
 
-const ArtSection = () => {
+const ArtSection = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => {
 
     let isMobile = false;
     useEffect(() => {
@@ -53,7 +53,7 @@ const ArtSection = () => {
     }, [])
 
     return (
-        <section className="px-5 min-h-dvh mt-10 radial-gradient" id="art">
+        <section className="px-5 min-h-dvh mt-10 radial-gradient" id="art" ref={ref}>
             <div className="customContainer h-full pt-28">
                 <div className="h-full flex-center flex-col gap-10">
                     <div className="relative">

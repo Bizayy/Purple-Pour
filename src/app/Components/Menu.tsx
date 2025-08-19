@@ -82,11 +82,11 @@ const Menu = () => {
     return (
         <section className="relative radial-gradient" id='menu' aria-labelledby="menu-heading" >
             <Image src='/images/slider-left-leaf.png' width={275} height={304} alt="left-leaf" id="m-left-leaf"
-                className="absolute left-0 w-1/3 md:w-fit object-contain -bottom-20" />
+                className="absolute left-0 w-1/3 md:w-fit object-contain bottom-0" />
             <Image src='/images/slider-right-leaf.png' width={275} height={304} alt="right-leaf" id="m-right-leaf"
-                className="absolute right-0 w-1/3 md:w-fit object-contain -top-20" />
+                className="absolute right-0 w-1/3 md:w-fit object-contain top-0" />
 
-            <div className="relative pt-16 pb-20 overflow-hidden ">
+            <div className="relative py-16 overflow-hidden ">
 
                 <h1 id="menu-heading" className="invisible">Cocktails Menu</h1>
 

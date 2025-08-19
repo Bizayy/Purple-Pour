@@ -6,19 +6,28 @@ import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Menu from "./Components/Menu";
 import Navbar from "./Components/Navbar";
+import { useRef } from "react";
 
 export default function Home() {
+
+    const homeRef = useRef<HTMLDivElement>(null);
+    const cocktailsRef = useRef<HTMLDivElement>(null);
+    const aboutRef = useRef<HTMLDivElement>(null);
+    const artRef = useRef<HTMLDivElement>(null);
+    const footerRef = useRef<HTMLDivElement>(null);
+
+    const refArr = [homeRef, cocktailsRef, aboutRef, artRef, footerRef];
+
+
     return (
-        <main className="bg-black/70">
-            <Navbar />
+        <main className="bg-black/70" ref={homeRef}>
+            <Navbar refArr={refArr} />
             <Hero />
-            <Cocktails />
-            <About />
-            <ArtSection />
+            <Cocktails ref={cocktailsRef} />
+            <About ref={aboutRef} />
+            <ArtSection ref={artRef} />
             <Menu />
-            <Footer />
-            {/*
-            */}
+            <Footer ref={footerRef} />
         </main>
     );
 }

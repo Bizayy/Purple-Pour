@@ -4,8 +4,9 @@ import { useGSAP } from "@gsap/react"
 import { openingHours, socials, storeInfo } from "../Constants"
 import Link from "next/link"
 import { SplitText } from "gsap/all"
+import { RefObject } from "react"
 
-const Footer = () => {
+const Footer = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => {
 
     useGSAP(() => {
 
@@ -39,7 +40,7 @@ const Footer = () => {
     }, [])
 
     return (
-        <footer className="relative radial-gradient min-h-dvh text-center overflow-hidden footer">
+        <footer className="relative radial-gradient min-h-dvh text-center overflow-hidden footer" ref={ref}>
 
             <div className="pt-20 absolute left-1/2 -translate-x-1/2">
                 <h1 className="text-4xl lg:text-6xl mb-5 title">{storeInfo.heading}</h1>
@@ -75,7 +76,7 @@ const Footer = () => {
             <Image src='/images/footer-left-leaf.png' width={356} height={393} alt='footer-left-leaf'
                 className="absolute left-0 bottom-0 left-leaf w-1/3 md:w-fit pointer-events-none" />
             <Image src='/images/footer-right-leaf.png' width={308} height={316} alt='footer-left-leaf'
-                className="absolute right-0 top-0 right-leaf w-1/3 md:w-fit pointer-events-none" />
+                className="absolute right-0 hidden md:block top-0 right-leaf w-1/3 md:w-fit pointer-events-none" />
         </footer>
     )
 }

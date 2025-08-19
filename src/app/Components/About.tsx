@@ -4,9 +4,10 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 import { SplitText } from 'gsap/all'
+import { RefObject } from 'react'
 gsap.registerPlugin(ScrollTrigger);
 
-const About = () => {
+const About = ({ ref }: { ref: RefObject<HTMLDivElement | null>; }) => {
 
     useGSAP(() => {
         const titleSplit = SplitText.create('#about h1', {
@@ -51,7 +52,7 @@ const About = () => {
     }, [])
 
     return (
-        <section id='about' className='min-h-screen p-16 px-5'>
+        <section id='about' className='min-h-screen p-16 px-5' ref={ref}>
             <div className='customContainer'>
                 <div className='grid grid-cols-1 lg:grid-cols-12 gap-5'>
                     <div className='flex flex-col items-start gap-5 md:col-span-8'>

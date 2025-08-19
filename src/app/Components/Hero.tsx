@@ -4,8 +4,6 @@ import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { SplitText } from "gsap/all"
 import { useEffect, useRef } from "react"
-import { ScrollTrigger } from "gsap/all"
-gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
 
@@ -43,7 +41,7 @@ const Hero = () => {
         // });
 
         // yesari pani kam garxa like the snippet commented above, but it must do that gsap.to('.mainTitle,{}) for the above code snip too.
-        //chose to make it with similar approach for both classnames.
+        //chose to make it with similar approaches for both classnames.
 
         gsap.to('.paragraph', {
             opacity: 1,
@@ -80,7 +78,6 @@ const Hero = () => {
                     end: endValues,
                     scrub: 1,
                     pin: true,
-                    pinSpacing: false,
                     onUpdate: (self) => {
                         // Control video playback based on scroll progress
                         if (videoElement.duration) {
@@ -99,7 +96,10 @@ const Hero = () => {
         <>
             <section className="w-full min-h-dvh relative z-10" id="hero">
                 <div className="bg-noisy">
-                    <h1 className='text-7xl md:text-9xl xl:text-[180px] font-semibold mt-20 md:mt-16 text-center [letter-spacing:2px] opacity-0 uppercase mainTitle'>Cocktails</h1>
+                    <h1 className='text-7xl md:text-9xl xl:text-[180px] font-semibold mt-16 text-center [letter-spacing:2px] opacity-0
+                        uppercase mainTitle'>
+                        Cocktails
+                    </h1>
                     <Image src='/images/hero-left-leaf.png' alt="leftLeafImg" width={266} height={461}
                         className="leftLeaf absolute w-1/3 md:w-fit bottom-12 md:-bottom-20 md:top-40 lg:top-30"
                     />
@@ -123,12 +123,12 @@ const Hero = () => {
                 </div>
             </section >
             {/*
-                <div className="w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover">
-            */}
-            <div className="video absolute bottom-0 left-0 h-1/2 md:h-8/10 z-0 pt-56 sm:pt-20 md:pt-20 lg:pt-10 xl:pt-5 inset-0 w-full md:object-contain object-bottom
+            <div className="video absolute bottom-0 left-0 h-1/2 md:h-8/10 pt-56 sm:pt-20 md:pt-20 lg:pt-10 xl:pt-5 inset-0 w-full md:object-contain object-bottom
                 mx-auto min-[450px]:pt-40 min-[550px]:pt-36 min-[700px]:pt-10 md:min-[850px]:pt-10 md:min-[950px]:pt-0">
+            */}
+            <div className="video w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover">
 
-                <video ref={videoRef} src="/videos/output.mp4" muted playsInline preload="metadata" className="w-full lg:w-[80%] mx-auto bg-transparent"
+                <video ref={videoRef} src="/videos/output.mp4" muted playsInline preload="metadata" className="mx-auto"
                 />
             </div>
         </>

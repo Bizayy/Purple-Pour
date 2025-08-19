@@ -1,18 +1,18 @@
 const navItems = [
     {
-        id: "cocktails",
+        id: 1,
         title: "Cocktails",
     },
     {
-        id: "about",
+        id: 2,
         title: "About Us",
     },
     {
-        id: "work",
+        id: 3,
         title: "The Art",
     },
     {
-        id: "contact",
+        id: 4,
         title: "Contact",
     },
 ];

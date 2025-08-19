@@ -4,8 +4,9 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/all"
 gsap.registerPlugin(ScrollTrigger)
 import { cocktailLists, mockTailLists } from "../Constants"
+import { RefObject } from "react"
 
-const Cocktails = () => {
+const Cocktails = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => {
 
     useGSAP(() => {
         const parallaxTimeline = gsap.timeline({
@@ -32,7 +33,7 @@ const Cocktails = () => {
 
 
     return (
-        <section id='cocktails' className='relative min-h-dvh w-full overflow-hidden bg-[url(/images/noise.png)] py-5 pb-24 sm:pb-10 sm:py-20'>
+        <section ref={ref} id='cocktails' className='relative min-h-dvh w-full overflow-hidden bg-[url(/images/noise.png)] py-5 pb-24 sm:pb-10 sm:py-20'>
             <div className="p-5">
                 <Image src='/images/cocktail-left-leaf.png' width={294} height={332} alt="cocktailLeftLeafImg" id="c-left-leaf"
                     className="w-1/3 md:w-fit absolute left-0 bottom-0 " />
