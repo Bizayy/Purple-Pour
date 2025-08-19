@@ -3,15 +3,21 @@ import Link from "next/link"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { SplitText } from "gsap/all"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const Hero = () => {
 
     const videoRef = useRef<HTMLVideoElement>(null);
 
-    let isMobileDevice = false;
+    // let isMobileDevice = false;
+    // useEffect(() => {
+    //     window.innerWidth < 768 ? isMobileDevice = true : isMobileDevice = false;
+    // }, [])
+
+    const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
-        window.innerWidth < 768 ? isMobileDevice = true : isMobileDevice = false;
+        setIsMobile(window.innerWidth < 768);
     }, [])
 
     useGSAP(() => {
@@ -71,7 +77,7 @@ const Hero = () => {
         const startValues = isMobileDevice ? 'top 50%' : 'center 50%';
         const endValues = isMobileDevice ? '120% top' : 'bottom top';
         if (videoElement) {
-            const tl = gsap.timeline({
+            gsap.timeline({
                 scrollTrigger: {
                     trigger: '.video',
                     start: startValues,

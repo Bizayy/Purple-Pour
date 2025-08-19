@@ -2,13 +2,16 @@ import Image from "next/image"
 import { featureLists, goodLists } from "../Constants"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import { RefObject, useEffect } from "react"
+import { RefObject, useEffect, useState } from "react"
 
 const ArtSection = ({ ref }: { ref: RefObject<HTMLDivElement | null> }) => {
 
-    let isMobile = false;
+    // const isMobile =false;
+    const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
-        window.innerWidth > 768 ? isMobile = false : isMobile = true;
+        // isMobile = window.innerWidth > 768 ? false : true;
+        setIsMobile(window.innerWidth < 768);
     }, [])
 
     useGSAP(() => {

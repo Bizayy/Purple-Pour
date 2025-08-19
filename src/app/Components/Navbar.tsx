@@ -9,14 +9,6 @@ gsap.registerPlugin(ScrollTrigger)
 import { ScrollToPlugin } from "gsap/all"
 gsap.registerPlugin(ScrollToPlugin)
 
-interface refObjectType {
-    homeRef: RefObject<HTMLDivElement | null>;
-    cocktailsRef: RefObject<HTMLDivElement | null>;
-    aboutRef: RefObject<HTMLDivElement | null>;
-    artRef: RefObject<HTMLDivElement | null>;
-    contactRef: RefObject<HTMLDivElement | null>;
-}
-
 const Navbar = ({ refArr }: { refArr: RefObject<HTMLDivElement | null>[] }) => {
 
     const handleClickToHome = () => {

@@ -1,12 +1,12 @@
 import Image from "next/image"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import { useRef, useState } from "react"
+import { useState } from "react"
 import { allCocktails } from "../Constants"
 
 const Menu = () => {
 
-    let [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     // const contentRef = useRef<HTMLDivElement>(null);
 
@@ -72,12 +72,12 @@ const Menu = () => {
         setCurrentIndex((index + allCocktailsLength) % allCocktailsLength);
     }
 
-    let previousCocktail = currentIndex == 0 ? allCocktails[allCocktailsLength - 1] : allCocktails[currentIndex - 1];
+    const previousCocktail = currentIndex == 0 ? allCocktails[allCocktailsLength - 1] : allCocktails[currentIndex - 1];
 
     let currentCocktail = allCocktails[currentIndex];
     if (currentIndex >= 0 && currentIndex < allCocktailsLength) currentCocktail = allCocktails[currentIndex]
 
-    let nextCocktail = currentIndex == allCocktailsLength - 1 ? allCocktails[0] : allCocktails[currentIndex + 1];
+    const nextCocktail = currentIndex == allCocktailsLength - 1 ? allCocktails[0] : allCocktails[currentIndex + 1];
 
     return (
         <section className="relative radial-gradient" id='menu' aria-labelledby="menu-heading" >
